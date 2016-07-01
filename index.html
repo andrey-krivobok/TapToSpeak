@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>It`s work!</title>
+	</head>
+	<script>
+    		function try_open()
+    		{
+			window.location.href='taptospeak://andrey-krivobok.github.io/DeepLinks/test'
+			setTimeout(function() {
+			   // Link to the App Store should go here -- only fires if deep link fails                
+			   window.location = "itms-apps://itunes.apple.com/us/app/imdb-movies-tv/id342792525";
+			}, 500);
+		}
+    	
+  	</script>
+
+	<body>
+		<a href="https://andrey-krivobok.github.io/DeepLinks/test">test link 1</a>
+		<p/>
+		<a href="taptospeak://show-start-screen">Show Start Screen</a>
+		<p/>
+		<button onClick="try_open()">Button</button>
+  	</body>
+</html>
