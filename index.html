@@ -5,6 +5,19 @@
 		<meta charset="utf-8">
 		<title>Tap To Speak Test</title>
 		
+		<script>
+			function startSpeak()
+			{
+				var iframe = document.getElementById('iframe');
+    				iframe.src = 'taptospeak://start-speak';			
+			}
+
+			function stopSpeak()
+			{
+				var iframe = document.getElementById('iframe');
+    				iframe.src = 'taptospeak://stop-speak';			
+			}
+		</script>
 </head>
 	
 	<body>
@@ -18,7 +31,7 @@
 		<p/>
 		
 		 <iframe src="" name="iframe_a"></iframe>
-		<button onclick="document.getElementById('iframe_a').src='taptospeak://start-speak'">Stop Speak</button>
+		<button onclick="startSpeak()" onmouseup="stopSpeak">Tap To Speak</button>
 
   	</body>
 </html>
