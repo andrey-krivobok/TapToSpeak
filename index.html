@@ -8,14 +8,16 @@
 		<script>
 			function startSpeak()
 			{
-				var frame = document.getElementById('tts_frame');
-    				frame.src = 'taptospeak://start-speak';			
+				// var frame = document.getElementById('tts_frame');
+    //				frame.src = 'taptospeak://start-speak';		
+    				window.location.href = 'taptospeak://start-speak';
 			}
 
 			function stopSpeak()
 			{
-				var frame = document.getElementById('tts_frame');
-    				frame.src = 'taptospeak://stop-speak';			
+				// var frame = document.getElementById('tts_frame');
+    //				frame.src = 'taptospeak://stop-speak';			
+    				window.location.href = 'taptospeak://stop-speak';
 			}
 		</script>
 </head>
