@@ -8,14 +8,14 @@
 		<script>
 			function startSpeak()
 			{
-				var iframe = document.getElementById('iframe');
-    				iframe.src = 'taptospeak://start-speak';			
+				var frame = document.getElementById('tts_frame');
+    				frame.src = 'taptospeak://start-speak';			
 			}
 
 			function stopSpeak()
 			{
-				var iframe = document.getElementById('iframe');
-    				iframe.src = 'taptospeak://stop-speak';			
+				var frame = document.getElementById('tts_frame');
+    				frame.src = 'taptospeak://stop-speak';			
 			}
 		</script>
 </head>
@@ -30,8 +30,8 @@
 		<a href="taptospeak://stop-speak">Stop Speak</a>
 		<p/>
 		
-		 <iframe src="" name="iframe"></iframe>
-		<button onclick="startSpeak()" onmouseup="stopSpeak">Tap To Speak</button>
+		 <iframe id="tts_frame"></iframe>
+		<button onclick="startSpeak()" onmouseup="stopSpeak()">Tap To Speak</button>
 
   	</body>
 </html>
