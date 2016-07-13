@@ -13,7 +13,7 @@
 			{
 				// var frame = document.getElementById('tts_frame');
     //				frame.src = 'taptospeak://start-speak';		
-    				// window.location.href = 'taptospeak://start-speak/AUDIO-CALL-ROOM';
+    				window.location.href = 'taptospeak://start-speak/AUDIO-CALL-ROOM';
     				document.getElementById("log").innerHTML = "start speak"
 	    			console.log("start speak");
     				document.getElementById("tts").addEventListener("touchend", stopSpeak);
@@ -23,9 +23,10 @@
 			{
 				// var frame = document.getElementById('tts_frame');
     //				frame.src = 'taptospeak://stop-speak';			
-    				// window.location.href = 'taptospeak://stop-speak';
+    				window.location.href = 'taptospeak://stop-speak';
     				document.getElementById("log").innerHTML = "stop speak"
     				console.log("stop speak");
+    				document.getElementById("tts").addEventListener("touchstart", startSpeak);
 			}
 		</script>
 </head>
