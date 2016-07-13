@@ -16,6 +16,7 @@
     				// window.location.href = 'taptospeak://start-speak/AUDIO-CALL-ROOM';
     				document.getElementById("log").innerHTML = "start speak"
 	    			console.log("start speak");
+    				document.getElementById("tts").addEventListener("touchend", stopSpeak);
 			};
 
 			function stopSpeak()
@@ -42,7 +43,7 @@
 		 <!--<iframe id="tts_frame"></iframe>-->
 		<button  onclick = "void(0)" onmousedown="startSpeak()" onmouseup="stopSpeak()">Tap To Speak</button>
 		<p/>
-		<div ontouchstart="startSpeak();" ontouchend="stopSpeak();">Tap To Speak</div>
+		<div id="tts" ontouchstart="startSpeak();">Tap To Speak</div>
 		<p/>
 		<p id="log"></p>
   	</body>
