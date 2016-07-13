@@ -14,8 +14,8 @@
 				// var frame = document.getElementById('tts_frame');
     //				frame.src = 'taptospeak://start-speak';		
     				// window.location.href = 'taptospeak://start-speak/AUDIO-CALL-ROOM';
-    				document.write("start speak")
-    			console.log("start speak");
+    				document.getElementById("log").innerHTML = "start speak"
+	    			console.log("start speak");
 			};
 
 			function stopSpeak()
@@ -23,7 +23,7 @@
 				// var frame = document.getElementById('tts_frame');
     //				frame.src = 'taptospeak://stop-speak';			
     				// window.location.href = 'taptospeak://stop-speak';
-    				document.write("stop speak")
+    				document.getElementById("log").innerHTML = "stop speak"
     				console.log("stop speak");
 			}
 		</script>
@@ -44,6 +44,6 @@
 		<p/>
 		<div ontouchstart="startSpeak();" ontouchend="stopSpeak();">Tap To Speak</div>
 		<p/>
-		<iframe id="tts"></iframe>
+		<p id="log"></p>
   	</body>
 </html>
