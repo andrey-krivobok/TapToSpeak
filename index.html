@@ -17,7 +17,7 @@
     				document.getElementById("log").innerHTML = "start speak"
 	    			console.log("start speak");
 	    			
-	    			setTimeout(function(){document.getElementById("tts").addEventListener("touchend", stopSpeak);}, 1000)
+	    			// setTimeout(function(){document.getElementById("tts").addEventListener("touchend", stopSpeak);}, 1000)
     				
 			};
 
@@ -28,7 +28,7 @@
     				window.location.href = 'taptospeak://stop-speak';
     				document.getElementById("log").innerHTML = "stop speak"
     				console.log("stop speak");
-    				document.getElementById("tts").addEventListener("touchstart", startSpeak);
+    				// document.getElementById("tts").addEventListener("touchstart", startSpeak);
 			}
 		</script>
 </head>
@@ -46,7 +46,7 @@
 		 <!--<iframe id="tts_frame"></iframe>-->
 		<button  onclick = "void(0)" onmousedown="startSpeak()" onmouseup="stopSpeak()">Tap To Speak</button>
 		<p/>
-		<div id="tts" ontouchstart="startSpeak();">Tap To Speak</div>
+		<div id="tts" ontouchstart="startSpeak();" ontouchend="stopSpeak();">Tap To Speak</div>
 		<p/>
 		<p id="log"></p>
   	</body>
