@@ -14,7 +14,7 @@
 				// var frame = document.getElementById('tts_frame');
     //				frame.src = 'taptospeak://start-speak';		
     				// window.location.href = 'taptospeak://start-speak/AUDIO-CALL-ROOM';
-    			window.open('taptospeak://start-speak/AUDIO-CALL-ROOM', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+    			document.getElementById('tts').src = 'taptospeak://start-speak/AUDIO-CALL-ROOM';
     			console.log("start speak");
 			};
 
@@ -42,6 +42,7 @@
 		<button  onclick = "void(0)" onmousedown="startSpeak()" onmouseup="stopSpeak()">Tap To Speak</button>
 		<p/>
 		<div ontouchstart="startSpeak();" ontouchend="stopSpeak();">Tap To Speak</div>
-
+		<p/>
+		<iframe id="tts"></iframe>
   	</body>
 </html>
