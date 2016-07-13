@@ -16,7 +16,9 @@
     				window.location.href = 'taptospeak://start-speak/AUDIO-CALL-ROOM';
     				document.getElementById("log").innerHTML = "start speak"
 	    			console.log("start speak");
-    				document.getElementById("tts").addEventListener("touchend", stopSpeak);
+	    			
+	    			setTimeout(function(){document.getElementById("tts").addEventListener("touchend", stopSpeak);}, 1000)
+    				
 			};
 
 			function stopSpeak()
